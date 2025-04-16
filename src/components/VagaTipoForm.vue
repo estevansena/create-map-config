@@ -45,7 +45,7 @@
         <button class="inserir-processador-btn" @click="InserirProcessador" :disabled="form.tipo === ''">
         Inserir Processador
         </button>
-
+    </div>
         <div v-for="(alerta, index) in alertas" :key="index" class="alerta-box">
         <span class="fechar" @click="removerAlerta(index)">×</span>
         <p><strong>Processador:</strong> {{ alerta.tipo }}</p>
@@ -54,7 +54,7 @@
         </div>
     </div>
     </div>
-</div>
+
 </template>
 
 <script>

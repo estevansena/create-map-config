@@ -31,14 +31,14 @@
         <button class="inserir-processador-btn" @click="inserirAcao" :disabled="selectedAction === ''">
           Inserir Action
         </button>
-  
+      </div>
         <div v-if="form.actionTipo !== ''" class="alerta-box">
           <span class="fechar" @click="removerAcao">×</span>
           <p><strong>Action:</strong> {{ form.actionTipo }}</p>
         </div>
       </div>
     </div>
-  </div>
+
   </template>
   
   <script>
