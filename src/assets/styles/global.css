@@ -1,0 +1,396 @@
+.form-wrapper {
+  flex: 1; /* Faz o formulário ocupar o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid white;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.form-header {
+  display: flex;
+  background: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3px 16px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-family: 'Fira Code', monospace;
+}
+
+.header-form-title {
+  font-size: 15px;
+  /* Centraliza o título */
+  margin-left: 50%; /* move o título 50% da largura do elemento pai */
+  transform: translateX(-50%); /* desloca o título para a esquerda, centralizando-o */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid white;
+  box-sizing: border-box;
+
+}
+
+.input {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #727cf5;
+  outline: none;
+}
+
+.inserir-processador-btn {
+  padding: 12px;
+  color: #333;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.clear-btn {
+  background: linear-gradient(to bottom, #dc4949, #b83232);
+  color: white;
+  border: none;
+  padding: 3px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+  transition: transform 0.2s ease, background 0.3s;
+  margin-left: auto;
+  width: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.clear-btn:hover {
+  background: linear-gradient(to bottom, #eb6c6c, #913131);
+}
+
+button {
+  padding: 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 3px;
+  color: #333;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #dedede;
+}
+
+button:active,
+.inserir-processador-btn:active,
+.clear-btn:active {
+  transform: scale(0.95);
+}
+
+button.active {
+  background-color: #03da6e;
+  color: #333;
+  box-shadow: 0px 4px 12px rgba(114, 124, 245, 0.4);
+}
+
+.form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-inputs button {
+  flex: 1;
+  min-width: 180px;
+}
+
+.alerta-box {
+  background-color: #fffbdd;
+  border: 1px solid #ffe58f;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.alerta-box p {
+  margin: 0;
+}
+
+.fechar {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000000;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-menu li {
+  padding: 5px 20px;
+}
+
+.sidebar-menu li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: start;
+  width: 90%;
+  padding: 10px 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  border: 0px solid #8d8d8d;
+  border-radius: 0;
+  overflow: hidden;
+  transition: all .35s;
+  z-index: 1;
+}
+
+.sidebar-menu li a span {
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-menu li a .icon {
+  width: 16px;
+  height: 16px;
+  stroke: white;
+}
+
+.sidebar-menu li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 1;
+  transition: all .35s;
+}
+
+.sidebar-menu li a:hover {
+  color: #000;
+}
+
+.sidebar-menu li a:hover .icon {
+  stroke: #000;
+}
+
+.sidebar-menu li a:hover::after {
+  width: 100%;
+}
+
+.sidebar-menu li a:active {
+  transform: scale(0.95);
+}
+
+.sidebar-menu li a.active {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.sidebar-menu li a.active .icon {
+  stroke: #000;
+}
+
+
+.sidebar {
+  flex-shrink: 0; /* Impede que o sidebar encolha */
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  box-shadow: 0px 0 9px rgba(41, 40, 40, 0.7);
+  z-index: 10;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px 10px 10px;
+}
+
+.app-name {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  letter-spacing: 1px;
+  animation: expandShrink 3s ease-in-out infinite;
+}
+
+@keyframes expandShrink {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+
+.view-window {
+  width: 390px; /* Largura fixa para o visualizador */
+  flex-shrink: 0; /* Impede que encolha */
+  background: #2d2d2d;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-family: monospace;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* garante que fique por cima do conteúdo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.window-header h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #ececec;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.download-btn {
+  background-color: #28a745; /* verde padrão de botões de download */
+  color: white;
+  border: none;
+  padding: 7px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.download-btn:hover {
+  background-color: #218838; /* tom mais escuro no hover */
+}
+
+.download-btn:active {
+  transform: scale(0.96); /* efeito de clique pressionado */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: #1e7e34; /* tom ainda mais escuro no clique */
+}
+
+
+.copy-btn {
+  background: #ffc107; /* amarelo padrão estilo Bootstrap */
+  color: white;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+  transition: background 0.3s, transform 0.1s, box-shadow 0.1s;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(to bottom, #ffdd57, #ffc107); /* gradiente amarelo claro para forte */
+}
+
+.copy-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: #e0a800; /* amarelo mais escuro no clique */
+}
+
+
+pre {
+  margin: 0;
+  padding: 10px 15px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* impede a rolagem no body */
+
+}
