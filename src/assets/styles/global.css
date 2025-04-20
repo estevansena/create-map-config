@@ -238,6 +238,30 @@ button.active {
   stroke: #000;
 }
 
+.clear-all-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #5e2828;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 0px;
+  font-size: 11px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.clear-all-button .icon {
+  width: 16px;
+  height: 16px;
+  stroke: white;
+}
+
+.clear-all-button:hover {
+  background-color: #8b1313;
+}
 
 .sidebar {
   flex-shrink: 0; /* Impede que o sidebar encolha */
