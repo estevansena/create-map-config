@@ -2,7 +2,6 @@
     <div class="form-wrapper">
       <header class="form-header">
         <h1 class="header-form-title">CONFIGURAÇÕES PAGINAÇÃO</h1>
-        <button class="clear-btn" @click="resetForm">CLEAR</button>
       </header>
   
       <div class="form-container">
@@ -80,9 +79,7 @@ import { saveToStorage, loadFromStorage, clearStorage } from '../utils/storage';
       saveFormData(key, formData) {
         saveToStorage(key, formData);
       },
-      clearFormData(key) {
-        clearStorage(key);
-      },
+
       toggleField(field) {
         this.form[field] = !this.form[field];
         this.emitUpdate();
@@ -107,12 +104,7 @@ import { saveToStorage, loadFromStorage, clearStorage } from '../utils/storage';
         this.form.actionTipo = "";
         this.emitUpdate();
       },
-      resetForm() {
-        this.form = this.defaultForm();
-        this.selectedAction = "";
-        this.clearFormData(this.storageKey);
-        this.emitUpdate();
-      }
+
     },
     mounted() {
       // Carregar os dados do formulário do storage ao montar o componente

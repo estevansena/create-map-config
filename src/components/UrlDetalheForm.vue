@@ -2,7 +2,6 @@
   <div class="form-wrapper">
     <header class="form-header">
       <h1 class="header-form-title">CONFIGURAÇÕES URL DETALHE</h1>
-      <button class="clear-btn" @click="resetForm">CLEAR</button>
     </header>
 
     <div class="form-container">
@@ -38,7 +37,7 @@
 </template>
 
 <script>
-import { saveToStorage, loadFromStorage, clearStorage } from '../utils/storage';
+import { saveToStorage, loadFromStorage } from '../utils/storage';
 
 export default {
   emits: ['updateUrlDetalhe'],
@@ -74,9 +73,6 @@ export default {
     saveFormData(key, formData) {
       saveToStorage(key, formData);
     },
-    clearFormData(key) {
-      clearStorage(key);
-    },
     toggleField(field) {
       this.form[field] = !this.form[field];
       this.emitUpdate();
@@ -99,12 +95,7 @@ export default {
       this.form.actionTipo = "";
       this.emitUpdate();
     },
-    resetForm() {
-      this.form = this.defaultForm();
-      this.selectedAction = "";
-      this.clearFormData(this.storageKey);
-      this.emitUpdate();
-    }
+
   },
   mounted() {
     this.form = loadFromStorage(this.storageKey, this.defaultForm());

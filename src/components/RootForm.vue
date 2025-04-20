@@ -2,7 +2,6 @@
   <div class="form-wrapper">
     <header class="form-header">
       <h1 class="header-form-title">CONFIGURAÇÕES ROOT</h1>
-      <button class="clear-btn" @click="resetForm">CLEAR</button>
     </header>
 
     <div class="form-container">
@@ -35,7 +34,7 @@
 
 <script>
 // Importe as funções de manipulação do localStorage
-import { saveToStorage, loadFromStorage, clearStorage } from '../utils/storage';
+import { saveToStorage, loadFromStorage } from '../utils/storage';
 
 export default {
   name: 'RootForm',
@@ -66,18 +65,11 @@ export default {
     toggleField(field) {
       this.form[field] = !this.form[field];
     },
-    resetForm() {
-      this.form = this.getInitialForm();
-      this.clearStorage('form_root'); // limpa do localStorage também
-    },
     saveFormData(storageKey, formData) {
       saveToStorage(storageKey, formData); // usa o utilitário para salvar no localStorage
     },
     loadFormData(storageKey) {
       return loadFromStorage(storageKey, this.getInitialForm()); // usa o utilitário para carregar do localStorage
-    },
-    clearStorage(storageKey) {
-      clearStorage(storageKey); // usa o utilitário para limpar do localStorage
     }
   }
 };

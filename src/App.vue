@@ -2,7 +2,7 @@
   <div class="app-container">
     <!-- Sidebar à esquerda -->
     <Sidebar class="sidebar" />
-    
+
     <!-- Formulários no meio -->
     <div class="form-container">
       <nav class="header">
@@ -12,7 +12,8 @@
       <!-- Exibir o formulário baseado no item selecionado -->
       <div class="form-content">
         <div v-if="activeIndex === 0">
-          <ExtraConfigForm :extraConfig="extra_config" @updateExtraConfig="updateExtraConfig" />
+          <ExtraConfigForm :extraConfig="extra_config" @updateExtraConfig="updateExtraConfig"
+          />
         </div>
         <div v-if="activeIndex === 1">
           <RootForm :root="root" @updateRoot="updateRoot" />
@@ -290,6 +291,7 @@ function updateTotalVagasSite(novoTotalVagasSite) {
 function updateTotalAnunciosSite(novoTotalAnunciosSite) {
   Object.assign(total_anuncios_site, novoTotalAnunciosSite);
 }
+
 </script>
 
 <style scoped>

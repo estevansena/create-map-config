@@ -2,7 +2,6 @@
     <div class="form-wrapper">
     <header class="form-header">
         <h1 class="header-form-title">CONFIGURAÇÕES ANÚNCIOS SITE</h1>
-        <button class="clear-btn" @click="resetForm">CLEAR</button>
     </header>
 
     <div class="form-container">
@@ -58,7 +57,7 @@
 </template>
 
 <script>
-import { saveToStorage, loadFromStorage, clearStorage } from '../utils/storage';
+import { saveToStorage, loadFromStorage } from '../utils/storage';
 
 export default {
     emits: ['updateTotalAnunciosSite'],
@@ -102,9 +101,6 @@ export default {
     },
     saveFormData(key, formData) {
         saveToStorage(key, formData);
-    },
-    clearFormData(key) {
-        clearStorage(key);
     },
     toggleField(field) {
         this.form[field] = !this.form[field];
@@ -152,13 +148,6 @@ export default {
         this.form.processadorTipo.splice(index, 1);
         this.form.processadorValor1.splice(index, 1);
         this.form.processadorValor2.splice(index, 1);
-    },
-    resetForm() {
-        this.form = this.defaultForm();
-        this.alertas = [];
-        this.clearFormData(this.storageKey);
-        this.clearFormData(this.storageKeyAlertas);
-        this.emitUpdate();
     },
     saveAlertas() {
         saveToStorage(this.storageKeyAlertas, this.alertas);
