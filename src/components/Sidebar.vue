@@ -27,6 +27,11 @@
         </template>
       </li>
     </ul>
+    <div class="sidebar-footer">
+  Desenvolvido por <a href="https://github.com/estevansena" target="_blank">Estevan Sena</a>
+  - v.1.2.0
+</div>
+
   </div>
 
   <main>
@@ -177,4 +182,25 @@ const cancelClear = () => {
 .popup-content button:hover {
   background-color: #dedede;
 }
+
+.sidebar-footer {
+  font-size: 11px;
+  color: #979595;
+  text-align: center;
+  margin-top: auto;
+  padding: 10px 0px;
+  bottom: 10px;
+  width: 100%;
+
+}
+.sidebar-footer a {
+  color: #c4c3c3;
+  text-decoration: none;
+}
+.sidebar-footer a:hover {
+  text-decoration: none;
+  color: #ffffff;
+
+}
+
 </style>
