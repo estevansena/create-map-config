@@ -37,8 +37,8 @@
           <option value="Dll">Dll</option>
         </select>
 
-        <input v-model="form.valor1" type="text" class="input" placeholder="Insira o valor 1 do processador" />
-        <input v-model="form.valor2" type="text" class="input" placeholder="Insira o valor 2 do processador (opcional)" />
+        <input v-model="form.valor1" type="text" class="input" placeholder="Insira o valor 1 do processador " />
+        <input v-model="form.valor2" type="text" class="input" placeholder="Insira o valor 2 do processador (Insira 'cidadeEmpresa' (sem aspas) para inserir a cidade da empresa cadastrada no admin)" />
 
         <button class="inserir-processador-btn" @click="InserirProcessador" :disabled="form.tipo === ''">
           Inserir Processador

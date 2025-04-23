@@ -96,7 +96,7 @@ export default {
         result += `  const total_anuncios_site = ${formatObject(obj['total_anuncios_site'], 2)};\n\n`;
       }
 
-      result += '  return { extra_config, root, url_vaga_detalhe, vaga_titulo, vaga_descricao, vaga_cidade, vaga_estado_sigla, vaga_tipo, vaga_salario, paginacao, total_vagas, total_vagas_site, total_anuncios_site, ativarMapaConfig };\n}';
+      result += '  return { extra_config, root, url_vaga_detalhe, vaga_titulo, vaga_descricao, vaga_cidade, vaga_estado_sigla, vaga_tipo, vaga_salario, paginacao, total_vagas, total_vagas_site, total_anuncios_site };\n}';
 
       return result;
     }

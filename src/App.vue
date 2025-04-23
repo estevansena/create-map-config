@@ -95,7 +95,7 @@ const root = reactive({
   ativo: false,
 });
 
-const titulo = reactive({
+const vaga_titulo = reactive({
   default: '',
   xpath: '',
   bancoCurriculos: false,
@@ -108,7 +108,7 @@ const titulo = reactive({
   ativo: false,
 });
 
-const descricao = reactive({
+const vaga_descricao = reactive({
   default: '',
   xpath: '',
   filtroDescricao: false,
@@ -226,8 +226,8 @@ const total_anuncios_site = reactive({
 const formData = reactive({
   extra_config,
   root,
-  titulo,
-  descricao,
+  vaga_titulo,
+  vaga_descricao,
   vaga_cidade,
   vaga_estado_sigla,
   vaga_tipo,
