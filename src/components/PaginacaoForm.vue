@@ -16,7 +16,7 @@
      
   
         <input v-model="form.parametro" type="text" class="input" placeholder="Insira o Parametro de Paginação" @input="emitUpdate" />
-        <input v-model="form.urlPaginacao" type="text" class="input" placeholder="Insira a Url de Paginacao ou Rota principal (StartsWith)" @input="emitUpdate" />
+        <input v-model="form.urlPaginacao" type="text" class="input" placeholder="Insira a Url de Paginacao ou Rota principal (Insira 'urlMapeada' (sem aspas) para inserir a url mapeada)" @input="emitUpdate" />
   
         <select v-model="selectedAction" class="input">
           <option disabled hidden value="">Selecione o action</option>
@@ -41,7 +41,7 @@
   </template>
   
   <script>
-import { saveToStorage, loadFromStorage, clearStorage } from '../utils/storage';
+import { saveToStorage, loadFromStorage } from '../utils/storage';
   
   export default {
     emits: ['updatePaginacao'],
