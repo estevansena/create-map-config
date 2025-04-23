@@ -249,11 +249,11 @@ function updateRoot(novoRoot) {
 }
 
 function updateTitulo(novoTitulo) {
-  Object.assign(titulo, novoTitulo);
+  Object.assign(vaga_titulo, novoTitulo);
 }
 
 function updateDescricao(novoDescricao) {
-  Object.assign(descricao, novoDescricao);
+  Object.assign(vaga_descricao, novoDescricao);
 }
 
 function updateCidade(novoCidade) {

@@ -52,12 +52,12 @@ export default {
         result += `  const root = ${formatObject(obj['root'], 2)};\n\n`;
       }
 
-      if ('titulo' in obj) {
-        result += `  const titulo = ${formatObject(obj['titulo'], 2)};\n\n`;
+      if ('vaga_titulo' in obj) {
+        result += `  const vaga_titulo = ${formatObject(obj['vaga_titulo'], 2)};\n\n`;
       }
 
-      if ('descricao' in obj) {
-        result += `  const descricao = ${formatObject(obj['descricao'], 2)};\n\n`;
+      if ('vaga_descricao' in obj) {
+        result += `  const vaga_descricao = ${formatObject(obj['vaga_descricao'], 2)};\n\n`;
       }
 
       if ('vaga_cidade' in obj) {
