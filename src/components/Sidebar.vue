@@ -29,7 +29,7 @@
     </ul>
     <div class="sidebar-footer">
   Desenvolvido por <a href="https://github.com/estevansena" target="_blank">Estevan Sena</a>
-  - v.1.2.0
+  - v.1.5.0
 </div>
 
   </div>
