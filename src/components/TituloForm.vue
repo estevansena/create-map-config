@@ -10,6 +10,10 @@
           Filtro Banco: {{ form.bancoCurriculos ? "Sim" : "Não" }}
         </button>
 
+        <button :class="{ active: form.excluirProcessadores }" @click="toggleField('excluirProcessadores')">
+          Excluir Processadores: {{ form.excluirProcessadores ? "Sim" : "Não" }}
+        </button>
+
         <button :class="{ active: form.urlDetalhe }" @click="toggleField('urlDetalhe')">
           Mapear Dentro da URL Detalhe: {{ form.urlDetalhe ? "Sim" : "Não" }}
         </button>
@@ -92,6 +96,7 @@ export default {
         default: "",
         xpath: "",
         bancoCurriculos: false,
+        excluirProcessadores: false,
         processadorTipo: [],
         processadorValor1: [],
         processadorValor2: [],
@@ -114,6 +119,7 @@ export default {
       this.$emit("updateTitulo", {
         default: this.form.default,
         xpath: this.form.xpath,
+        excluirProcessadores: this.form.excluirProcessadores,
         processadorTipo: this.form.processadorTipo,
         processadorValor1: this.form.processadorValor1,
         processadorValor2: this.form.processadorValor2,

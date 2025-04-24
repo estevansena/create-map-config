@@ -9,6 +9,10 @@
                 <button :class="{ active: form.urlDetalhe }" @click="toggleField('urlDetalhe')">
                 Mapear Dentro da URL Detalhe: {{ form.urlDetalhe ? "Sim" : "Não" }}
             </button>
+
+            <button :class="{ active: form.excluirProcessadores }" @click="toggleField('excluirProcessadores')">
+          Excluir Processadores: {{ form.excluirProcessadores ? "Sim" : "Não" }}
+          </button>
     
             <button :class="{ active: form.excluirCampo }" @click="toggleField('excluirCampo')">
                 Excluir Campo: {{ form.excluirCampo ? "Sim" : "Não" }}

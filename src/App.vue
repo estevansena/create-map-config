@@ -99,6 +99,7 @@ const vaga_titulo = reactive({
   default: '',
   xpath: '',
   bancoCurriculos: false,
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
@@ -111,6 +112,7 @@ const vaga_titulo = reactive({
 const vaga_descricao = reactive({
   default: '',
   xpath: '',
+  excluirProcessadores: false,
   filtroDescricao: false,
   processadorTipo: [],
   processadorValor1: [],
@@ -124,6 +126,7 @@ const vaga_descricao = reactive({
 const vaga_cidade = reactive({
   default: "",
   xpath: "",
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
@@ -136,6 +139,7 @@ const vaga_cidade = reactive({
 const vaga_estado_sigla = reactive({
   default: "",
   xpath: "",
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
@@ -148,6 +152,7 @@ const vaga_estado_sigla = reactive({
 const vaga_tipo = reactive({
   default: "",
   xpath: "",
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
@@ -168,6 +173,7 @@ const url_vaga_detalhe = reactive({
 const vaga_salario = reactive({
   default: "",
   xpath: "",
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
@@ -190,6 +196,7 @@ const paginacao = reactive({
 const total_vagas = reactive({
   default: "",
   xpath: "",
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
@@ -202,6 +209,7 @@ const total_vagas = reactive({
 const total_vagas_site = reactive({
   default: "",
   xpath: "",
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
@@ -213,6 +221,7 @@ const total_vagas_site = reactive({
 const total_anuncios_site = reactive({
   default: "",
   xpath: "",
+  excluirProcessadores: false,
   processadorTipo: [],
   processadorValor1: [],
   processadorValor2: [],
