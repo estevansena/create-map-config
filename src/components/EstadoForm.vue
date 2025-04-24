@@ -91,6 +91,7 @@
             tipo: "",
             default: "",
             xpath: "",
+            excluirProcessadores: false,
             processadorTipo: [],
             processadorValor1: [],
             processadorValor2: [],
@@ -113,6 +114,7 @@
             this.$emit("updateEstado", {
             default: this.form.default,
             xpath: this.form.xpath,
+            excluirProcessadores: this.form.excluirProcessadores,
             processadorTipo: this.form.processadorTipo,
             processadorValor1: this.form.processadorValor1,
             processadorValor2: this.form.processadorValor2,

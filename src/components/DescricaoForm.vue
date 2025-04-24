@@ -95,6 +95,7 @@ import { saveToStorage, loadFromStorage } from '../utils/storage';
           tipo: "",
           default: "",
           xpath: "",
+          excluirProcessadores: false,
           filtroDescricao: false,
           processadorTipo: [],
           processadorValor1: [],
@@ -118,6 +119,7 @@ import { saveToStorage, loadFromStorage } from '../utils/storage';
         this.$emit("updateDescricao", {
           default: this.form.default,
           xpath: this.form.xpath,
+          excluirProcessadores: this.form.excluirProcessadores,
           processadorTipo: this.form.processadorTipo,
           processadorValor1: this.form.processadorValor1,
           processadorValor2: this.form.processadorValor2,
