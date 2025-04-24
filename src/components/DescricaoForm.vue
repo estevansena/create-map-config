@@ -103,7 +103,7 @@ import { saveToStorage, loadFromStorage } from '../utils/storage';
           urlDetalhe: false,
           excluirCampo: false,
           ativo: false,
-          refIndex: 2
+          refIndex: 3
         };
       },
       loadFormData(key) {
