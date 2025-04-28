@@ -86,6 +86,7 @@ const activeIndex = computed(() => store.getters.activeIndex);
 // Objetos reativos para os dados dos formulários
 const extra_config = reactive({
   urlFiltro: "",
+  limparCache: false,
 });
 
 const root = reactive({
