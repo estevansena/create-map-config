@@ -176,6 +176,7 @@ button.active {
   gap: 10px;
   justify-content: start;
   width: 90%;
+  min-width: 170px; /* Ajuste de acordo com seu layout */
   padding: 10px 10px;
   color: #fff;
   text-decoration: none;
@@ -218,6 +219,7 @@ button.active {
 
 .sidebar-menu li a:hover .icon {
   stroke: #000;
+  z-index: 2;
 }
 
 .sidebar-menu li a:hover::after {

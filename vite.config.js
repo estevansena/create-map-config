@@ -4,6 +4,6 @@ import { saveToStorage } from './src/utils/storage';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/create-map-config/', // ⚠️ substitua pelo nome do seu repositório
+  base: '/create-map-config/', //substitua pelo nome do seu repositório
   plugins: [vue()],
 })
