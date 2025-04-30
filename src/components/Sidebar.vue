@@ -29,7 +29,7 @@
     </ul>
     <div class="sidebar-footer">
   Desenvolvido por <a href="https://github.com/estevansena" target="_blank">Estevan Sena</a>
-  - v.1.5.0
+  - v.1.8.0
 </div>
 
   </div>
@@ -184,23 +184,23 @@ const cancelClear = () => {
 }
 
 .sidebar-footer {
-  font-size: 11px;
-  color: #979595;
+  font-size: 12px;
+  color: #cccccc;
   text-align: center;
   margin-top: auto;
   padding: 10px 0px;
   bottom: 10px;
   width: 100%;
+  font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
 
 }
 .sidebar-footer a {
-  color: #c4c3c3;
+  color: #ffffff;
   text-decoration: none;
 }
 .sidebar-footer a:hover {
   text-decoration: none;
-  color: #ffffff;
-
+  color: #c74fff;
 }
 
 </style>
